@@ -53,10 +53,10 @@ const onYesFwendClick = (e) => {
 
 
 }
-const playSound = (sound, loop = false, onEnd) => {
+const playSound = (sound, loop = false, volume = 0.5, onEnd) => {
 
   let audio = new Audio(sound)
-  audio.volume = 0.5
+  audio.volume = volume
   audio.loop = loop
   audio.onended = onEnd
   audio.play()
@@ -67,7 +67,7 @@ const onYesLikeClick = (e) => {
   gifUrl.value = "https://media.giphy.com/media/vnh5zLtbpFbhe/giphy.gif"
   yesClicked.value = true
   likesMe.value = true
-  playSound(snowman, true )
+  playSound(snowman, true, 0.1 )
 
 
   discord_message("https://discord.com/api/webhooks/1192107935011188747/M-iq8cOdreqL0ON3mMMZDTDWA6UuKoG6meJgKmxDv5JsgxFrIjpb85MgpbmveEhYwsCO",
