@@ -1,5 +1,6 @@
 <script setup>
 import spyFamilyEnding from './assets/spy-family-ending.mp3'
+import snowman from './assets/snowman.mp3'
 
 
 onMounted(() => {
@@ -45,7 +46,7 @@ function discord_message(webHookURL, message) {
 const onYesFwendClick = (e) => {
   gifUrl.value = "https://media.giphy.com/media/vnh5zLtbpFbhe/giphy.gif"
   yesClicked.value = true
-
+  playSound(spyFamilyEnding, true )
   discord_message("https://discord.com/api/webhooks/1192107935011188747/M-iq8cOdreqL0ON3mMMZDTDWA6UuKoG6meJgKmxDv5JsgxFrIjpb85MgpbmveEhYwsCO",
   `you got a fwend yay! :)\nbefore Tried no button ${timesTriedToClickNo.value} times`
   )
@@ -53,7 +54,7 @@ const onYesFwendClick = (e) => {
 
 }
 const playSound = (sound, loop = false, onEnd) => {
-  likesMe.value = true
+
   let audio = new Audio(sound)
   audio.volume = 0.5
   audio.loop = loop
@@ -65,9 +66,9 @@ const playSound = (sound, loop = false, onEnd) => {
 const onYesLikeClick = (e) => {
   gifUrl.value = "https://media.giphy.com/media/vnh5zLtbpFbhe/giphy.gif"
   yesClicked.value = true
+  likesMe.value = true
+  playSound(snowman, true )
 
-
-  playSound(spyFamilyEnding, true )
 
   discord_message("https://discord.com/api/webhooks/1192107935011188747/M-iq8cOdreqL0ON3mMMZDTDWA6UuKoG6meJgKmxDv5JsgxFrIjpb85MgpbmveEhYwsCO",
   `someone likes you! :)\nsurprising ik !! \nno button click ${timesTriedToClickNo.value} times`
