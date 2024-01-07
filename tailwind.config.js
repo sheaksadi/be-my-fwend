@@ -19,6 +19,21 @@ export default {
         'mint': '#B4F8C8'
         // ...
       },
+      // animation: {
+      //   'popup': 'popup 0.5s ease-in-out',
+      // },
+      // keyframes: {
+      //   'popup': {
+      //     '0%': {
+      //       position: 'absolute',
+      //       top: '0',
+      //     },
+      //     '100%': {
+      //       position: 'absolute',
+      //       top: '50%',
+      //     },
+      //   },
+      // }
     },
 
   },
